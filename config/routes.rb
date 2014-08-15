@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :salesmen
   devise_for :clients
   devise_for :admins
   # The priority is based upon order of creation: first created -> highest priority.
