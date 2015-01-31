@@ -11,8 +11,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
-gem "haml"
-gem "haml-rails", "~> 0.8"
+gem 'haml'
+gem 'haml-rails', "~> 0.8"
+gem 'awesome_print'
 
 gem 'spring',        group: :development
 
@@ -20,6 +21,8 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'guard-rspec', require: false
+  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :test do
