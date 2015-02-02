@@ -13,6 +13,8 @@ gem 'devise'
 gem 'haml'
 gem 'haml-rails', "~> 0.8"
 gem 'awesome_print'
+gem 'bootstrap-sass', '~> 3.3.3'
+gem "font-awesome-rails"
 
 gem 'spring',        group: :development
 

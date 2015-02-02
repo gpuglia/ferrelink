@@ -28,8 +28,14 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (5.1.1)
+      execjs
+      json
     awesome_print (1.2.0)
     bcrypt (3.1.7)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -57,6 +63,8 @@ GEM
     erubis (2.7.0)
     execjs (2.2.1)
     ffi (1.9.3)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.5)
     guard (2.6.1)
       formatador (>= 0.2.4)
@@ -206,8 +214,10 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bootstrap-sass (~> 3.3.3)
   coffee-rails (~> 4.0.0)
   devise
+  font-awesome-rails
   guard-rspec
   haml
   haml-rails (~> 0.8)
