@@ -2,5 +2,6 @@ Rails.application.routes.draw do
   devise_for :salesmen
   devise_for :admins
 
-  resource :orders, only: [:new]
+  resources :orders, only: [:new]
+  resources :clients, only: [:index]
 end

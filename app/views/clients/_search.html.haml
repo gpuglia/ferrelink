@@ -1,0 +1,5 @@
+= form_tag clients_path, method: 'get' do
+  .form-group
+    = label_tag :search, "Número de Cliente"
+    = text_field_tag :search, params[:search], class: 'form-control', placeholder: "Introduzca el número del cliente: "
+  = submit_tag "Buscar Cliente", name: nil, class: 'btn btn-primary'
