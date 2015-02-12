@@ -16,7 +16,10 @@ gem 'awesome_print'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem "font-awesome-rails"
 
-gem 'spring',        group: :development
+group :development do
+  gem 'spring'
+  gem 'better_errors'
+end
 
 
 group :development, :test do
