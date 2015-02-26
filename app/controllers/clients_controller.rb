@@ -1,5 +1,12 @@
 class ClientsController < ApplicationController
   def index
-    Client.search(params[:search].to_i)
+    @client = Client.search(params[:search])
+
+    respond_to do |format|
+      if @client
+        format.js
+      else
+      end
+    end
   end
 end
