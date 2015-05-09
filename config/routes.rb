@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :salesmen
-  devise_for :admins
+  resources :orders, only: [:new, :create] do
+    get 'confirm', on: :member
+  end
 
-  resources :orders, only: [:new, :create]
+  root "orders#new"
 end
