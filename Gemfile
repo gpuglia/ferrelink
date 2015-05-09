@@ -23,12 +23,13 @@ end
 
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-rails'
   gem 'guard-rspec', require: false
   gem 'pry-rails'
   gem 'pry-byebug'
 end
 
 group :test do
+  gem 'fuubar'
   gem 'database_cleaner'
 end
