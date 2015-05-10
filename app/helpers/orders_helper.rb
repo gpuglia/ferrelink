@@ -3,5 +3,7 @@ module OrdersHelper
     (Product.all - order.products).each do |product|
       order.items.build(product: product)
     end
+
+    order
   end
 end
