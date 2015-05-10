@@ -1,7 +1,7 @@
 %h1 Pedidos
 
 %h3 Datos del Cliente
-= form_for @order do |f|
+= form_for setup_order(@order)do |f|
   = f.label :client_name, "Nombre de Cliente"
   = f.text_field :client_name
   = f.label :client_code, "Código de Cliente"
@@ -17,14 +17,12 @@
         %th Venta minima
         %th Cantidad
     %tbody
-      - Product.all.each do |product|
+      = f.fields_for :items do |ff|
+        - product = ff.object.product
         %tr
           %td= product.code
           %td= product.description
           %td= product.price
           %td= product.minimum_sale
-          %td
-            = fields_for :item do |fi|
-              = fi.hidden_field :product_id, value: product.id
-              = fi.number_field :quantity
+          %td= ff.number_field :quantity
   = f.submit "Proceder"
