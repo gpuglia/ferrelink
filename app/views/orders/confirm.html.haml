@@ -1,6 +1,7 @@
-Confirmar Pedido
-= @order.client_name
-= @order.client_code
+%h1 Confirmar Pedido
+%h2.span
+  = @order.client_name
+  = @order.client_code
 
 %h3 Productos
 %table
@@ -12,7 +13,7 @@ Confirmar Pedido
       %th Venta minima
       %th Cantidad
   %tbody
-    - @order.items do |item|
+    - @order.items.each do |item|
       - product = item.product
       %tr
         %td= product.code
@@ -20,7 +21,6 @@ Confirmar Pedido
         %td= product.price
         %td= product.minimum_sale
         %td= item.quantity
-
 
 = link_to "Confirmar", thank_you_order_path(@order)
 = link_to "Regresar", edit_order_path(@order)
