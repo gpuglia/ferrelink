@@ -11,6 +11,23 @@ class OrdersController < ApplicationController
 
     if @order.save
       redirect_to confirm_order_path(@order)
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    @order = Order.find(params[:id])
+    @order.update(confirmed: false)
+  end
+
+  def update
+    @order = Order.find(params[:id])
+
+    if @order.update_attributes(order_params)
+      redirect_to confirm_order_path(@order)
+    else
+      render 'edit'
     end
   end
 
