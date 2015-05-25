@@ -18,6 +18,11 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def thank_you
+    @order = Order.find(params[:id])
+    @order.confirm
+  end
+
   private
 
   def order_params

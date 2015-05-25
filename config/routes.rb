@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :orders, only: [:show, :new, :create] do
+  resources :orders, except: :index do
     member do
       get 'confirm'
+      get 'thank_you'
     end
   end
 
