@@ -4,4 +4,8 @@ class Order < ActiveRecord::Base
   has_many :products, through: :items
 
   accepts_nested_attributes_for :items, reject_if: -> (attrs) { attrs['quantity'].blank? }
+
+  def confirm
+    update(confirmed: true)
+  end
 end
