@@ -1,29 +1,5 @@
-%h1 Pedidos
+%h1 Realizar pedido
 
-%h3 Datos del Cliente
 = form_for setup_order(@order)do |f|
-  = f.label :client_name, "Nombre de Cliente"
-  = f.text_field :client_name
-  = f.label :client_code, "Código de Cliente"
-  = f.text_field :client_code
-
-  %h3 Productos
-  %table
-    %thead
-      %tr
-        %th Codigo
-        %th Descripcion
-        %th Precio
-        %th Venta minima
-        %th Cantidad
-    %tbody
-      = f.fields_for :items do |ff|
-        - product = ff.object.product
-        %tr
-          %td= product.code
-          %td= product.description
-          %td= product.price
-          %td= product.minimum_sale
-          %td= ff.number_field :quantity
-          = ff.hidden_field :product_id, value: product.id
+  = render 'form', f: f
   = f.submit "Proceder"
