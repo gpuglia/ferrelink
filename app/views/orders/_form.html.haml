@@ -5,7 +5,7 @@
 = f.text_field :client_code
 
 %h3 Productos
-%table
+%table.table
   %thead
     %tr
       %th Codigo
@@ -23,7 +23,7 @@
         %td= product.description
         %td= product.price
         %td= product.minimum_sale
-        %td= ff.number_field :quantity
+        %td= ff.number_field :quantity, class: "form-control"
         - if ff.object.quantity.present?
           %td= ff.check_box :_destroy
         = ff.hidden_field :product_id, value: product.id
