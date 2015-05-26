@@ -1,8 +1,15 @@
+%hr
 %h3 Datos del Cliente
-= f.label :client_name, "Nombre de Cliente"
-= f.text_field :client_name
-= f.label :client_code, "Código de Cliente"
-= f.text_field :client_code
+
+.form-inline.row
+  .form-group.col-md-5
+    = f.label :client_name, "Nombre de Cliente"
+    = f.text_field :client_name, class: "form-control"
+  .form-group.col-md-5.col-md-pull-1
+    = f.label :client_code, "Código de Cliente"
+    = f.text_field :client_code, class: "form-control"
+
+%hr
 
 %h3 Productos
 %table.table
