@@ -18,6 +18,7 @@
       %th Codigo
       %th Descripcion
       %th Precio
+      %th Unidad
       %th Bulto
       %th Venta minima
       %th Cantidad
@@ -30,6 +31,7 @@
         %td= product.code
         %td= product.description
         %td= product.price
+        %td= product.unit
         %td= product.bundle
         %td= product.minimum_sale
         %td= ff.number_field :quantity, class: "form-control quantity-field"
