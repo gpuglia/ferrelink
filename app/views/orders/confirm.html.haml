@@ -1,10 +1,9 @@
 %h1 Confirmar Pedido
-%h2.span
-  = @order.client_name
-  = @order.client_code
+%hr
+%h2.span.text-primary
+  = "#{@order.client_name} - #{@order.client_code}"
 
-%h3 Productos
-%table
+%table.table
   %thead
     %tr
       %th Codigo
@@ -22,5 +21,5 @@
         %td= product.minimum_sale
         %td= item.quantity
 
-= link_to "Confirmar", thank_you_order_path(@order)
-= link_to "Regresar", edit_order_path(@order)
+= link_to "Confirmar", thank_you_order_path(@order), class: "btn btn-success"
+= link_to "Regresar", edit_order_path(@order), class: "btn btn-default"
