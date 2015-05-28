@@ -6,14 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="container">
-  <%= render_flash %>
+<body>
+  <div class="header-wrapper">
+    <div class="header">
+      <a href="http://ferrelink.com/en/" id="logo">Ferrelink</a>
+    </div>
+  </div>
+  <div class="container">
+    <%= render_flash %>
 
-  <%= yield %>
+    <%= yield %>
 
+    <hr>
+    <footer>
+      <p class="text-muted">Ferrelink © 2010 - 2015 Todos los derechos reservados</p>
+    </footer>
+  </div>
   <hr>
-  <footer>
-    <p class="text-muted">Ferrelink © 2010 - 2015 Todos los derechos reservados</p>
-  </footer>
 </body>
 </html>
