@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.2.0'
 
 gem 'rails', '4.1.4'
 gem 'pg'
-gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass'
+gem 'sass-rails', '>= 3.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -14,7 +15,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'haml'
 gem 'haml-rails', "~> 0.8"
 gem 'awesome_print'
-gem 'bootstrap-sass', '~> 3.3.3'
 gem "font-awesome-rails"
 gem "puma"
 
