@@ -29,7 +29,7 @@
       - product = ff.object.product
       %tr
         %td= product.code
-        %td= product.description
+        %td.align-left= product.description
         %td= product.price
         %td= product.unit
         %td= product.bundle
@@ -37,7 +37,7 @@
           = product.minimum_sale
         %td
           = ff.label :quantity, class: "control-label hide"
-          = ff.number_field :quantity, class: "form-control quantity-field js_quantity"
+          = ff.number_field :quantity, class: "form-control quantity-field js_quantity", data: { container: 'body', toggle: 'popover', content: 'La cantidad debe ser múltiplo de la venta mínima'}
 
         - if ff.object.quantity.present?
           %td= ff.check_box :_destroy

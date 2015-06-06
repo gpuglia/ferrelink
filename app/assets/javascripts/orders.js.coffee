@@ -1,4 +1,9 @@
 $ ->
+  popover = $('[data-toggle="popover"]')
+  popover.popover
+    placement: 'right'
+    trigger: 'manual'
+
   $(".js_quantity").on "keyup", (e) ->
     base = $(this)
     parent = base.parent()
@@ -6,12 +11,14 @@ $ ->
     parent.removeClass("has-error has-success")
 
     if (base.val() == "")
-      return
-    if (isMultipleOfMinimum(base))
+      base.popover('hide')
+    else if (isMultipleOfMinimum(base))
       parent.addClass("has-success")
+      base.popover('hide')
       enableSubmit()
     else
       parent.addClass("has-error")
+      base.popover('show')
       disableSubmit()
 
   isMultipleOfMinimum = (base)->
