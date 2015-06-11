@@ -28,7 +28,7 @@
     = f.fields_for :items do |ff|
       - product = ff.object.product
       %tr
-        %td= product.code
+        %td.align-left= product.code
         %td.align-left= product.description
         %td= product.price
         %td= product.unit
