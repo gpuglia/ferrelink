@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   def show
+    @orders = Order.confirmed
   end
 
   def new
