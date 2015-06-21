@@ -1,0 +1,10 @@
+%h1 Órdenes
+%hr
+
+%table.table
+  %thead
+    %th Número
+    %th Cliente
+    %th Vendedor
+  %tbody
+    = render partial: 'order', collection: @orders

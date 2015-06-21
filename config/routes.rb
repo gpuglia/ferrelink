@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :orders, except: :index do
+  resources :orders do
     member do
       get 'confirm'
       get 'thank_you'

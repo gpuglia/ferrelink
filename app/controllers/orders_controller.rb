@@ -1,6 +1,9 @@
 class OrdersController < ApplicationController
-  def show
+  def index
     @orders = Order.confirmed
+  end
+
+  def show
   end
 
   def new
