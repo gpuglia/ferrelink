@@ -17,6 +17,7 @@ gem 'haml-rails', "~> 0.8"
 gem 'awesome_print'
 gem "font-awesome-rails"
 gem "puma"
+gem "devise"
 
 group :development do
   gem 'spring'

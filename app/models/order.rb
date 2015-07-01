@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  belongs_to :salesman
+  belongs_to :user
   has_many :items, dependent: :destroy
   has_many :products, through: :items
 
